@@ -10,6 +10,7 @@ export default function GoogleButton(){
     if (session && session.user){
         return (
             <div>
+                <p>{session.user.role}</p>
                 <p>{session.user.name} 👋 |<button onClick={() => signOut()}>התנתק</button> </p>
             </div>
         )
