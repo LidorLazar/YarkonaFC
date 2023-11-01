@@ -8,7 +8,7 @@ async function getPlayerData() {
 export default async function PlayerCard() {
     const data = await getPlayerData()
     return (
-        <section className={'h-screen grid grid-cols-2 md:grid-cols-4'}>
+        <section className={'grid grid-cols-2 mb-20 md:grid-cols-4'}>
             {data.map((item: any) => {
                 if (item.picture) {
                     return (
@@ -16,7 +16,7 @@ export default async function PlayerCard() {
                             <div className={'relative '}>
                                 <figure>
                                     <Image src={item.picture} alt={item.name} title={item.name} width={300} height={300}
-                                           quality={100} className={'object-contain'}/>
+                                           quality={100} className={'object-contain w-full'}/>
                                 </figure>
                                 <article className={'absolute bottom-0 h-1/5 flex items-center w-full justify-center' +
                                     ' text-xl bg-white bg-opacity-50  shadow-lg backdrop-filter backdrop-blur-md backdrop-contrast-125 backdrop-brightness-125'}>
