@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Terms() {
     return (
-        <section dir={'rtl'} className={'h-full w-full flex flex-col items-center gap-3'}>
+        <section dir={'rtl'} className={'h-full w-full flex flex-col items-center gap-3 mb-20'}>
             <figure className={'flex w-full justify-center md:w-1/3'}>
                 <Image src={termsImage} alt={'termsImage'} title={'termsImage'} className={'w-1/3'}/>
             </figure>
