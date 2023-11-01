@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
 
-        <footer dir={'rtl'} className={'w-full'}>
+        <footer dir={'rtl'} className={'w-full '}>
             <section className={'h-20 bg-blue-500 w-full text-white flex items-center justify-center gap-5'}>
                 <p className={'flex items-center '}>
                     מצאתם באג? צלמו לנו !

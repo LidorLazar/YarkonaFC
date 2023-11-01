@@ -8,7 +8,7 @@ export default function Player() {
 
 
     return (
-        <div >
+        <div>
             <Suspense fallback={<Loading/>}>
             <PlayerCard/>
             </Suspense>
