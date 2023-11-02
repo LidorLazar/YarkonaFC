@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 async function getPlayerData() {
-    const response: any = await fetch('http://localhost:3000/api/data')
-    return await response.json();
+    const response: any = await fetch('http://localhost:3000/api')
+    return await response.json()
 }
 
 export default async function PlayerCard() {
     const data = await getPlayerData()
-
+    console.log(data)
 
     return (
         <section dir={'rtl'} className={'grid grid-cols-2 mb-20 md:grid-cols-4'}>
