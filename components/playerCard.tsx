@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 async function getPlayerData() {
-    const response: any = await fetch('http://localhost:3000/api/data',{
-        next: {revalidate: 0}});
-    return response.json();
+    const response: any = await fetch('http://localhost:3000/api/data')
+    return await response.json();
 }
 
 export default async function PlayerCard() {
