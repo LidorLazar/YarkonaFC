@@ -18,12 +18,13 @@ export default function RootLayout({
     return (
         <html lang="he">
         <body>
-        <header>
-            <Providers>
+        <Providers>
+            <header>
+
                 <Navbar/>
-            </Providers>
-        </header>
-        {children}
+            </header>
+            {children}
+        </Providers>
 
         <footer className={'fixed bottom-0 w-full'}>
             <Footer/>
