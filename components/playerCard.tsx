@@ -1,14 +1,19 @@
 import Image from "next/image";
 
 async function getPlayerData() {
-    const response: any = await fetch('http://localhost:3000/api/data',{
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-    return await response.json();
+    try {
+        const response = await fetch('http://localhost:3000/api/data');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        // Handle any errors here
+        console.error('Error fetching data:', error);
+        return null; // or you can return an empty object {} or any default value
+    }
 }
-
 export default async function PlayerCard() {
     const data = await getPlayerData()
 
