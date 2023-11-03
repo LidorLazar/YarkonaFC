@@ -2,7 +2,7 @@ import Image from "next/image";
 
 
 async function getPlayerData() {
-    const response: any = await fetch('http://localhost:3000/api');
+    const response: any = await fetch('https://yarkona-fc.vercel.app/api');
     const finalRes:any =  await response.json()
     console.log(finalRes)
     return finalRes
