@@ -1,4 +1,4 @@
-'use client'
+
 import {Suspense} from "react";
 import Loading from "@/components/loading";
 import PlayerCard from "@/components/playerCard";
