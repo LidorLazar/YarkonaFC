@@ -1,15 +1,13 @@
 import Image from "next/image";
 
-
 async function getPlayerData() {
-    const response: any = await fetch('https://yarkona-fc.vercel.app/api');
-    const finalRes:any =  await response.json()
-    console.log(finalRes)
-    return finalRes
+    const response: any = await fetch('/api');
+    return await response.json()
 }
 
 export default async function PlayerCard() {
     const data:any = await getPlayerData()
+    console.log(data)
 
 
     return (

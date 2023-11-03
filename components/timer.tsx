@@ -1,9 +1,14 @@
 
 'use client'
 import React, { useEffect, useState } from "react";
+import {useSession} from "next-auth/react";
 
 export default function Timer() {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    const [logged, IsLogged] = useState(false);
+
+
+
 
     function calculateTimeLeft() {
         const now = new Date();
