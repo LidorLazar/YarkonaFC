@@ -1,18 +1,21 @@
 
 import Image from "next/image";
+import {db} from "@/lib/db";
+import {NextResponse} from "next/server";
 
 async function getPlayerData() {
-    const res = await fetch('https://yarkona-fc.vercel.app/api')
-    return res.json()
+    const res:{} = await db.user.findMany()
+    return NextResponse.json(res)
 }
 
 export default async function PlayerCard() {
+    const data:any = await getPlayerData()
+    const help = await data.json()
 
-    const data = await getPlayerData()
 
     return (
         <section dir={'rtl'} className={'grid grid-cols-2 mb-20 gap-2 md:grid-cols-4 '}>
-            {data.map((item: any) => {
+            {help.map((item: any) => {
                 if (item.image) {
                     return (
                         <div key={item.id}>
