@@ -49,8 +49,7 @@ export default function Timer() {
     const seconds = timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds;
 
     return (
-        <section dir={'rtl'} className={'flex h-full w-full justify-center items-center flex-col text-center gap-3' +
-            ' flex-wrap'}>
+        <section dir={'rtl'} className={'flex h-1/3 flex-col items-center justify-center text-center gap-3'}>
             <article>
                 <p className={'text-[1.5em]'}>
                     ההרשמה נפתחת בעוד
@@ -58,7 +57,7 @@ export default function Timer() {
                     {days} ימים {hours} שעות {minutes} דקות {seconds} שניות
                 </p>
             </article>
-            <div className={' w-full h-full'}>
+            <div className={'flex justify-center w-full h-1/3'}>
                 <button disabled={!checkTime()} className={"bg-blue-500 rounded-xl w-1/4 h-full"}>
                     {' '}
                     מגיע{' '}

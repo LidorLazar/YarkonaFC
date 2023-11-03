@@ -1,10 +1,10 @@
 import Timer from "@/components/timer";
-import Loading from "@/components/loading";
+
 
 
 export default function Home() {
   return (
-    <main>
+    <main className={'h-fullScreen flex flex-col justify-center'}>
     <Timer/>
     </main>
   )

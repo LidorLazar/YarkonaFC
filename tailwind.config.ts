@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             height: {
-                'fullScreen': 'calc(700px - 500px)'
+                'fullScreen': 'calc(100vh - 208px)'
             },
             backdropBlur: {
                 "glassBlur": 'blur(8.4px)'
