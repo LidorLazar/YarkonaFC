@@ -1,13 +1,17 @@
 import Image from "next/image";
 
 async function getPlayerData() {
-    const response: any = await fetch('https://yarkona-fc.vercel.app/api')
-    return await response.json()
+    const response: any = await fetch('https://yarkona-fc.vercel.app/api',{
+        cache:'no-cache'
+    })
+
+    const res = await response.json()
+
+    return <pre>{JSON.stringify(res)}</pre>
 }
 
 export default async function PlayerCard() {
-    const data = await getPlayerData()
-    console.log(data)
+    const data:any = await getPlayerData()
 
     return (
         <section dir={'rtl'} className={'grid grid-cols-2 mb-20 md:grid-cols-4'}>
