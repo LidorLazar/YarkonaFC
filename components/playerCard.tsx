@@ -10,12 +10,11 @@ async function getPlayerData() {
 
 export default async function PlayerCard() {
     const data:any = await getPlayerData()
-    const help = await data.json()
-
+    const dataPlayer = await data.json()
 
     return (
         <section dir={'rtl'} className={'grid grid-cols-2 mb-20 gap-2 md:grid-cols-4 '}>
-            {help.map((item: any) => {
+            {dataPlayer.map((item: any) => {
                 if (item.image) {
                     return (
                         <div key={item.id}>
